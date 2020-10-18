@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content="width-device-width, initial-scale-1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>CAACCACAC</h1>
+    {{ posts }}
+    <hr>
+    {% for post in posts %}
+          {{ posts }}
+    {% endfor %}
+    <hr>
+    {% for post in posts %}
+       <div>
+       <p>published: {{ post.published_date }}</p>
+       <h1><a href="">{{ post.title }}</a></h1>
+       <p>{{ post.text|linebreaksbr }}</p>
+       </div>
+ {% endfor %}
+  </body>
+</html>
