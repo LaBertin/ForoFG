@@ -5,7 +5,6 @@
         <title>Document</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/ForoApp.css' %}">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
 
@@ -17,20 +16,19 @@
         <div class="centro BodyColorLetras Contenedorh">
             <ul class="opc-nav">
                 <li class="nav-item"> <a href="trucasos.html">TRUCAZOS</a></li>
-                <li class="nav-item"> <a href="foro.html">FORO</a></li> 
-                <li class="nav-item"> <a href="top-jugadores.html">TOP JUGADORES</a></li>  
-                <li class="nav-item"> <a href="registrarse.html">REGISTRARSE</a></li>  
-                <li class="nav-item"> <a href="iniciasesion.html">INICIAR SESION</a></li>  
+                <li class="nav-item"> <a href="foro.html">FORO</a></li>
+                <li class="nav-item"> <a href="top-jugadores.html">TOP JUGADORES</a></li>
+                <li class="nav-item"> <a href="registrarse.html">REGISTRARSE</a></li>
+                <li class="nav-item"> <a href="iniciasesion.html">INICIAR SESION</a></li>
             </ul>
         </div>
     </header>
-    
+
     <body>
         <div class="titulonoti page-header">
             <a href="{% url 'nuevo_post' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            <h1><a href="/">Foro</a></h1>
         </div>
-        <div class="BodyColorLetras content container">
+        <div class="BodyColorLetras conte centro">
             <div class="row">
                 <div class="col-md-8">
                 {% block content %}
