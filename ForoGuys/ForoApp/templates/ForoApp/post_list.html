@@ -1,19 +1,4 @@
 
-{% extends 'ForoApp/base.html' %}
-
-{% block content %}
-  {% for post in posts %}
-    <div class="post bloque3 MiniBCL">
-      <h1><a href="{% url 'detalle_publicacion' pk=post.pk %}">{{ post.title }}</a></h1>
-    </div>
-    <div class="date">
-      {{post.published_date}}
-    </div>
-    <div class="bloque3">
-        <a class="MiniBCL">Codigo FallGuy: #{{post.Código_FallGuys}}</a>
-    </div>
-  {% endfor %}
-{% endblock %}
 <!--
 <div class="tamaño">
 

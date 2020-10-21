@@ -4,6 +4,7 @@ from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
+from django.http import HttpResponse
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
@@ -39,3 +40,18 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'ForoApp/editar.html', {'form': form})
+
+def inicio(request):
+    return render(request,'ForoApp/inicio.html')
+
+def iniciasesion(request):
+    return render(request,'ForoApp/iniciasesion.html')
+
+def registrarse(request):
+    return render(request,'ForoApp/registrarse.html')
+
+def trucasos(request):
+    return render(request,'ForoApp/trucasos.html')
+
+def top_jugadores(request):
+    return render(request,'ForoApp/top_jugadores.html')

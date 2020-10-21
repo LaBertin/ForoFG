@@ -1,4 +1,4 @@
-<html>
+<!--<html>
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,32 +21,20 @@
             </ul>
         </div>
     </header>
+-->
 
-    <body>
 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="footer">
-                <div class="footerizquierda">
-                    <a>Todos los derechos reservados ©.</a>
-                </div>
-                <div class="footerderecha">
-                    <a href="http://www.instagram.com"><img class="derecha" src="C:\Users\lazar\Desktop\Mis perris Mobile\img\instagram.png" width="25"> </a>
-                    <a href="http://www.facebook.com"><img class="derecha" src="C:\Users\lazar\Desktop\Mis perris Mobile\img\facebook.png" width="25"> </a>
-                    <a href="http://www.twitter.com"><img class="derecha" src="C:\Users\lazar\Desktop\Mis perris Mobile\img\twitter.png" width="25"> </a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+{% extends 'ForoApp/base.html' %}
+{% block content %}
+  {% for post in posts %}
+    <div class="post bloque3 MiniBCL">
+      <h1><a href="{% url 'detalle_publicacion' pk=post.pk %}">{{ post.title }}</a></h1>
+    </div>
+    <div class="date">
+      {{post.published_date}}
+    </div>
+    <div class="bloque3">
+        <a class="MiniBCL">Codigo FallGuy: #{{post.Código_FallGuys}}</a>
+    </div>
+  {% endfor %}
+{% endblock %}

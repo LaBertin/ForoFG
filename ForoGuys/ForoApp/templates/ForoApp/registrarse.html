@@ -1,4 +1,4 @@
-<html>
+<!--<html>
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,15 +17,17 @@
         <div class="centro BodyColorLetras Contenedorh">
             <ul class="opc-nav">
                 <li class="nav-item"> <a href="trucasos.html">TRUCAZOS</a></li>
-                <li class="nav-item"> <a href="foro.html">FORO</a></li> 
-                <li class="nav-item"> <a href="top-jugadores.html">TOP JUGADORES</a></li>  
-                <li class="nav-item"> <a href="registrarse.html">REGISTRARSE</a></li>  
-                <li class="nav-item"> <a href="iniciasesion.html">INICIAR SESION</a></li>  
+                <li class="nav-item"> <a href="foro.html">FORO</a></li>
+                <li class="nav-item"> <a href="top-jugadores.html">TOP JUGADORES</a></li>
+                <li class="nav-item"> <a href="registrarse.html">REGISTRARSE</a></li>
+                <li class="nav-item"> <a href="iniciasesion.html">INICIAR SESION</a></li>
             </ul>
         </div>
     </header>
+-->
 
-    <body>
+{% extends 'ForoApp/base.html' %}
+{% block content %}
         <div class="centro tamaño ">
             <a class="titulonoti"> REGISTRARSE </a>
 
@@ -65,23 +67,8 @@
                         <input class="centro textareaapodo" type="password" required minlength="8" name="ccontraseña" placeholder="Confirme contraseña">
                     </div>
                     <br>
-                    <br>        
+                    <br>
                     <button class="centro boton" type="submit">REGISTRARSE</button>
                 </form>
-            </div>  
-            <br>
-                <div class="footer">
-                    <div class="footerizquierda">
-                        <a>Todos los derechos reservados ©.</a>
-                    </div>
-                    <div class="footerderecha">
-                    <a href="http://www.instagram.com"><img class="derecha" src="C:\Users\lazar\Desktop\Mis perris Mobile\img\instagram.png" width="25"> </a>
-                    <a href="http://www.facebook.com"><img class="derecha" src="C:\Users\lazar\Desktop\Mis perris Mobile\img\facebook.png" width="25"> </a>
-                    <a href="http://www.twitter.com"><img class="derecha" src="C:\Users\lazar\Desktop\Mis perris Mobile\img\twitter.png" width="25"> </a>
-                    </div>
-                </div>
             </div>
-            
-        </div>
-    </body>
-</html>
+          {% endblock %}

@@ -1,30 +1,5 @@
-<html>
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
-    </head>
-
-    <header>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="js/jquery.js"></script>
-        <nav class="BodyColorLetras">
-            <a href="inicio.html"><img class="logo" src="C:\Users\lazar\Desktop\Mis perris Mobile\img\logofall.png" width="300"> </a>
-            <br>
-        </nav>
-        <div class="centro BodyColorLetras Contenedorh">
-            <ul class="opc-nav">
-                <li class="nav-item"> <a href="trucasos.html">TRUCAZOS</a></li>
-                <li class="nav-item"> <a href="foro.html">FORO</a></li> 
-                <li class="nav-item"> <a href="top-jugadores.html">TOP JUGADORES</a></li>  
-                <li class="nav-item"> <a href="registrarse.html">REGISTRARSE</a></li>  
-                <li class="nav-item"> <a href="iniciasesion.html">INICIAR SESION</a></li>  
-            </ul>
-        </div>
-    </header>
-    <body>
+{% extends 'ForoApp/base.html' %}
+{% block content %}
         <div class="centro tamaño">
             <a class="titulonoti">INICIAR SESION</a>
             <br>
@@ -46,7 +21,7 @@
                     <br>
                     <br>
                     <br>
-                    <br>  
+                    <br>
                     <button class="centro boton" type="submit">INICIAR SESIÓN</button>
                 </form>
             </div>
@@ -57,15 +32,4 @@
             <br>
             <br>
             <br>
-            <div class="footer">
-                <div class="footerizquierda">
-                    <a>Todos los derechos reservados ©.</a>
-                </div>
-                <div class="footerderecha">
-                    <a href="http://www.instagram.com"><img class="derecha" src="C:\Users\lazar\Desktop\Mis perris Mobile\img\instagram.png" width="25"> </a>
-                    <a href="http://www.facebook.com"><img class="derecha" src="C:\Users\lazar\Desktop\Mis perris Mobile\img\facebook.png" width="25"> </a>
-                    <a href="http://www.twitter.com"><img class="derecha" src="C:\Users\lazar\Desktop\Mis perris Mobile\img\twitter.png" width="25"> </a>
-                </div>
-            </div>
-    </body>
-</html>
+            {% endblock %}
