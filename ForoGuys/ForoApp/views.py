@@ -6,9 +6,7 @@ from .forms import PostForm
 from django.shortcuts import redirect
 from django.http import HttpResponse
 
-def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'ForoApp/post_list.html', {'posts': posts})
+
 # Create your views here.
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -55,3 +53,7 @@ def trucasos(request):
 
 def top_jugadores(request):
     return render(request,'ForoApp/top_jugadores.html')
+
+def foro(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'ForoApp/foro.html', {'posts': posts})
