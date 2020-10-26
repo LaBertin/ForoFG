@@ -60,12 +60,13 @@
     -->
     {% extends 'ForoApp/base.html' %}
     {% block content %}
+    {% load static %}
         <a class="titulonoti centro">Sección de noticias</a>
             <div class="tamaño centro ">
                 <div class=" conte">
                     <div class="fotonoti bloque grow2">
                         <br>
-                        <a href="inicio.html" ><img src="C:\Users\lazar\Desktop\Mis perris Mobile\img\fall-guys-ultimate-knockout-2010653.jpg" width="325"> </a>
+                        <a><img src="{% static 'img\fall-guys-ultimate-knockout-2010653.jpg' %}" width="325"> </a>
                     </div>
                     <div class="bloque">
                       <details>
@@ -85,7 +86,7 @@
                 <div class="conte colorSeccion">
                     <div class="fotonoti bloque grow2">
                         <br>
-                        <a href="inicio.html" ><img src="C:\Users\lazar\Desktop\Mis perris Mobile\img\noticia2.jpg" width="325"> </a>
+                        <a href="inicio.html" ><img src="{% static 'img\noticia2.jpg' %}" width="325"> </a>
                     </div>
                     <div class="bloque">
                       <details>
@@ -105,7 +106,7 @@
                 <div class="conte">
                     <div class="fotonoti bloque grow2">
                         <br>
-                        <a href="inicio.html" ><img src="C:\Users\lazar\Desktop\Mis perris Mobile\img\noticia3.jpg" width="325"> </a>
+                        <a href="inicio.html" ><img src="{% static 'img\noticia3.jpg' %}" width="325"> </a>
                     </div>
                     <div class="bloque">
                       <details>
