@@ -10,29 +10,23 @@
 
     <header>
         <nav class="centro BodyColorLetras">
-            <a href="inicio.html"><img class="logo" src="{% static 'img\logofall.png' %}" width="300"> </a>
+            <a href="{% url 'Inicio' %}"><img class="logo" src="{% static 'img\logofall.png' %}" width="300"> </a>
             <br>
         </nav>
         <div class="centro BodyColorLetras Contenedorh">
             <ul class="opc-nav">
-                <li class="nav-item"> <a href="trucasos.html">TRUCAZOS</a></li>
-                <li class="nav-item"> <a href="foro.html">FORO</a></li>
-                <li class="nav-item"> <a href="top_jugadores.html">TOP JUGADORES</a></li>
-                <li class="nav-item"> <a href="registrarse.html">REGISTRARSE</a></li>
-                <li class="nav-item"> <a href="iniciasesion.html">INICIAR SESION</a></li>
+                <li class="nav-item"> <a href="{% url 'trucasos' %} ">TRUCAZOS</a></li>
+                <li class="nav-item"> <a href="{% url 'foro' %}">FORO</a></li>
+                <li class="nav-item"> <a href="{% url 'top_jugadores' %}">TOP JUGADORES</a></li>
+                <li class="nav-item"> <a href="{% url 'registrarse' %}">REGISTRARSE</a></li>
+                <li class="nav-item"> <a href="{% url 'iniciasesion' %}">INICIAR SESION</a></li>
             </ul>
         </div>
     </header>
 
     <body>
-
-        <div class="BodyColorLetras conte centro">
-            <div class="row">
-                <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
-                </div>
-            </div>
+      {% block content %}
+      {% endblock %}
         </div>
         <div class="footer">
             <div class="footerizquierda">
