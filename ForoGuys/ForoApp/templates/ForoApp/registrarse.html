@@ -28,6 +28,20 @@
 
 {% extends 'ForoApp/base.html' %}
 {% block content %}
+<div class="centro tamaño ">
+    <a class="titulonoti"> REGISTRARSE </a>
+      <div class="conte ">
+        <form method="¨POST" class="conte ">
+          <div class="bloque nombreletras">
+              {{form.as_p}}
+                <input type = 'submit' value="REGISTRARSE" />
+          </div>
+        </form>
+
+      </div>
+</div>
+{% endblock %}
+<!--
         <div class="centro tamaño ">
             <a class="titulonoti"> REGISTRARSE </a>
 
@@ -38,7 +52,7 @@
                     <div class="bloque">
                         <label for="nombrecuenta">Nombre de cuenta</label>
                     </div>
-                    <div class="bloque">
+                    <div saclass="bloque">
                         <input class="centro textareaapodo" type="text" required minlength="6" maxlength="20"  name="nombrecuenta" placeholder="Ingrese nombre de cuenta">
                     </div>
                     <div class="bloque">
@@ -71,4 +85,4 @@
                     <button class="centro boton" type="submit">REGISTRARSE</button>
                 </form>
             </div>
-          {% endblock %}
+          -->

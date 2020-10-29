@@ -1,14 +1,21 @@
 from django.shortcuts import render
 from .models import Post
+from .models import Usuarios
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
+from .forms import UsuariosFrom, Raw
 from django.shortcuts import redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 
 
 # Create your views here.
+def registrarse(request):
+    form = Raw()
+
+    return render(request,'ForoApp/registrarse.html', {'form':form})
+
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'ForoApp/detalle_publicacion.html', {'post': post})
@@ -46,8 +53,7 @@ def inicio(request):
 def iniciasesion(request):
     return render(request,'ForoApp/iniciasesion.html')
 
-def registrarse(request):
-    return render(request,'ForoApp/registrarse.html')
+
 
 def trucasos(request):
     return render(request,'ForoApp/trucasos.html')
