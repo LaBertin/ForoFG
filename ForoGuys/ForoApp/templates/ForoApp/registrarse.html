@@ -28,13 +28,13 @@
 
 {% extends 'ForoApp/base.html' %}
 {% block content %}
-<div class="centro tamaño ">
-    <a class="titulonoti"> REGISTRARSE </a>
-      <div class="conte ">
-        <form method="¨POST" class="conte ">
-          <div class="bloque nombreletras">
+<div class="tamaño">
+    <a class="titulonoti centro"> REGISTRARSE </a>
+      <div class="conte">
+        <form method="POST" class="conte centro">
+          <div class="bloque centro">
               {{form.as_p}}
-                <input type = 'submit' value="REGISTRARSE" />
+                <input class="boton" type = 'submit' value="REGISTRARSE" />
           </div>
         </form>
 
