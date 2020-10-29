@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
 from django.http import HttpResponse
+from django.contrib.auth.forms import UserCreationForm
 
 
 # Create your views here.

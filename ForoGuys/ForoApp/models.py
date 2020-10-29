@@ -16,3 +16,9 @@ def publish(self):
 
 def __str__(self):
     return self.title
+
+class Usuarios(models.Model):
+    nom_usuario = models.CharField(max_length=25)
+    codigo_fallGuy = models.CharField(max_length=4)
+    email = models.CharField(max_length=100)
+    contrasena = models.CharField(max_length=25)
