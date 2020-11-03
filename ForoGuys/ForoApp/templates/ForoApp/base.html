@@ -19,7 +19,14 @@
                 <li class="nav-item"> <a href="{% url 'foro' %}">FORO</a></li>
                 <li class="nav-item"> <a href="{% url 'top_jugadores' %}">TOP JUGADORES</a></li>
                 <li class="nav-item"> <a href="{% url 'registrarse' %}">REGISTRARSE</a></li>
-                <li class="nav-item"> <a href="{% url 'iniciasesion' %}">INICIAR SESION</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">CERRAR SESION</a> </li>
+                <li> <a href="#"> {{ user.username }}</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">INICIAR SESION</a></li>
+                {% endif %}
+                
+
             </ul>
         </div>
     </header>

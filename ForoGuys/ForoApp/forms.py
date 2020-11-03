@@ -16,6 +16,6 @@ class UsuariosFrom(forms.ModelForm):
 
 class Raw(forms.Form):
     nombre_usuario = forms.CharField()
-    codigo_fallGuy = forms.CharField()
-    email = forms.CharField()
-    contrasena = forms.CharField()
+    código_fallGuy = forms.IntegerField(max_value="9999",min_value="1000")
+    email = forms.EmailField()
+    contraseña = forms.CharField(widget=forms.PasswordInput)
