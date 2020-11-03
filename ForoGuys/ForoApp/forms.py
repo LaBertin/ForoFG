@@ -25,3 +25,6 @@ class Raw(forms.Form):
                                      widget=forms.TextInput(attrs={"placeholder":"Ingrese contraseña"}))
     repetirContrasena = forms.CharField(label='Confirmar contraseña',
                                      widget=forms.TextInput(attrs={"placeholder":"Ingrese nuevamente contraseña"}))
+
+class CustomUserCreateForm(UserCreationForm):
+    pass
