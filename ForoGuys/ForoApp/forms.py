@@ -15,7 +15,13 @@ class UsuariosFrom(forms.ModelForm):
         fields = ('nom_usuario','codigo_fallGuy', 'email', 'contrasena')
 
 class Raw(forms.Form):
-    nombre_usuario = forms.CharField()
-    código_fallGuy = forms.IntegerField(max_value="9999",min_value="1000")
-    email = forms.EmailField()
-    contraseña = forms.CharField(widget=forms.PasswordInput)
+    nombre_usuario = forms.CharField(label='Nombre de usuario',
+                                     widget=forms.TextInput(attrs={"placeholder":"Ingrese nombre de usuario"}))
+    codigo_fallGuy = forms.CharField(label='Codigo FallGuy',
+                                     widget=forms.TextInput(attrs={"placeholder":"Codigo FallGuy #"}))
+    email = forms.CharField(label='Email',
+                                     widget=forms.TextInput(attrs={"placeholder":"Ingrese correo electronico"}))
+    contrasena = forms.CharField(label='Contraseña',
+                                     widget=forms.TextInput(attrs={"placeholder":"Ingrese contraseña"}))
+    repetirContrasena = forms.CharField(label='Confirmar contraseña',
+                                     widget=forms.TextInput(attrs={"placeholder":"Ingrese nuevamente contraseña"}))
