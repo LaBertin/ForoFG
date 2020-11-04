@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/jquery.js' %}">
     </head>
 
     <header>
@@ -18,11 +19,11 @@
                 <li class="nav-item"> <a href="{% url 'trucasos' %} ">TRUCAZOS</a></li>
                 <li class="nav-item"> <a href="{% url 'foro' %}">FORO</a></li>
                 <li class="nav-item"> <a href="{% url 'top_jugadores' %}">TOP JUGADORES</a></li>
-                <li class="nav-item"> <a href="{% url 'registro' %}">REGISTRARSE</a></li>
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'logout' %}">CERRAR SESION</a> </li>
                 <li> <a href="#"> {{ user.username }}</a></li>
                 {% else %}
+                <li class="nav-item"> <a href="{% url 'registro' %}">REGISTRARSE</a></li>
                 <li><a href="{% url 'login' %}">INICIAR SESION</a></li>
                 {% endif %}
 
