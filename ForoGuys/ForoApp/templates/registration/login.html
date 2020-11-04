@@ -10,17 +10,18 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6 offset-md-3">
+            <div class="">
                 <div class="card">
-                    <div class="card-body">
-                        <h2 class="BodyColorLetras">Ingresa tus datos</h2>
+                    <div class="card-body centro">
+                        <h2 class="titulonoti">Ingresa tus datos</h2>
                         <hr>
-                        <form action="" method="post">
-                            
+                        <form class="centro" action="" method="post">
+
                             {% csrf_token %}
                             {{ form }}
+                            <hr>
                             
-                            <input class="boton" type="submit" value="Ingresar">
+                            <h2><input class="boton centro" type="submit" value="INGRESAR"></h2>
 
                         </form>
                     </div>

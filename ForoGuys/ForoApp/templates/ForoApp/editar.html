@@ -1,8 +1,12 @@
 {% extends 'ForoApp/base.html' %}
 {% block content %}
+{% if user.is_authenticated %}
 <h1>Nuevo Post</h1>
 <form method="post" class="post-form">{% csrf_token %}
     {{ form.as_p }}
     <button type='submit' class="save btn btn-default">Grabar</button>
 </form>
+{% else%}
+    <h3 class="BodyColorLetras">Tienes que iniciar sesión para publicar</h3>
+{% endif%}
 {% endblock %}
