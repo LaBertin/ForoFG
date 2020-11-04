@@ -27,4 +27,6 @@ class Raw(forms.Form):
                                      widget=forms.TextInput(attrs={"placeholder":"Ingrese nuevamente contraseña"}))
 
 class CustomUserCreateForm(UserCreationForm):
-    pass
+    class Meta:
+        model = User
+        fields = ['username', "first_name","last_name","email","password1","password2" ]

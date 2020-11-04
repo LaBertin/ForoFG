@@ -8,6 +8,7 @@ from .forms import UsuariosFrom, Raw, CustomUserCreateForm
 from django.shortcuts import redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login
 
 
 # Create your views here.
@@ -15,6 +16,16 @@ def registro(request):
     data= {
         'form':CustomUserCreateForm()
     }
+
+    if request.method=='POST':
+        formulario =CustomUserCreateForm(data=request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            user = authenticate(username=formulario.cleaned_data["username"], password=formulario.cleaned_data["password1"])
+            login(request,user)
+            messages.success(request,"Te has registrado con exito!!")
+            return redirect(to="home")
+        data["form"]=formulario
     return render(request,'registration/registro.html',data)
 
 def post_detail(request, pk):
