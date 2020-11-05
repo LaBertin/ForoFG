@@ -15,10 +15,39 @@
                     <div class="card-body centro">
                         <h2 class="titulonoti">REGISTRARSE</h2>
                         <hr>
-                        <form action="" method="post">
+                        <form class="conte" action="" method="post">
 
                             {% csrf_token %}
-                            {{ form }}
+                            <div class="bloque">
+                              <label for="nombrecuenta">Usuario : </label>
+                              {{ form.username }}
+                            </div>
+                            <div class="bloque">
+                              <label for="contraseña">Nombre : </label>
+                              {{ form.first_name }}
+                            </div>
+                            <div class="bloque">
+                              <label for="contraseña">Apellidos : </label>
+                              {{ form.last_name }}
+                            </div>
+                            <div class="bloque">
+                              <label for="contraseña">Correo : </label>
+                              {{ form.email }}
+                            </div>
+                            <div class="bloque">
+                              <label for="contraseña">Contraseña : </label>
+                              {{ form.password1 }}
+                            </div>
+                            <div class="bloque">
+                              <label for="contraseña">Confirmar contraseña : </label>
+                              {{ form.password2}}
+                            </div>
+
+
+
+
+
+
 
                             <h2><input class="boton" type = 'submit' value="REGISTRARSE" /></h2>
 
