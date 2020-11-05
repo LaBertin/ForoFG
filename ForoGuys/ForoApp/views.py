@@ -21,8 +21,7 @@ def registro(request):
         formulario =CustomUserCreateForm(data=request.POST)
         if formulario.is_valid():
             formulario.save()
-            user = authenticate(username=formulario.cleaned_data["username"], password=formulario.cleaned_data["password1"])
-            login(request,user)
+            
 
             return redirect(to="/")
         data["form"]=formulario

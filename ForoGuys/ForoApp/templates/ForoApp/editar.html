@@ -1,12 +1,27 @@
 {% extends 'ForoApp/base.html' %}
 {% block content %}
 {% if user.is_authenticated %}
-<h1>Nuevo Post</h1>
-<form method="post" class="post-form">{% csrf_token %}
+<h1 class="centro BodyColorLetras">Nuevo Post</h1>
+<form method="post" class="centro post-form">{% csrf_token %}
     {{ form.as_p }}
-    <button type='submit' class="save btn btn-default">Grabar</button>
+    <button type='submit' class="boton save btn">GUARDAR</button>
 </form>
 {% else%}
-    <h3 class="BodyColorLetras">Tienes que iniciar sesión para publicar</h3>
+    <br>
+    <br>
+    <br>
+    <h3 class="BodyColorLetras centro">Tienes que iniciar sesión para publicar</h3>
+    <br><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br><br>
 {% endif%}
 {% endblock %}

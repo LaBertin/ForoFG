@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingreso al sistema</title>
+    
 </head>
 <body>
     <div class="container">
@@ -15,12 +15,34 @@
                     <div class="card-body centro">
                         <h2 class="titulonoti">REGISTRARSE</h2>
                         <hr>
-                        <form action="" method="post">
+                        <form class="centro" action="" method="post">
 
                             {% csrf_token %}
-                            {{ form }}
-
-                            <h2><input class="boton" type = 'submit' value="REGISTRARSE" /></h2>
+                            <div class="centro bloque">
+                              <h4><label class="centro BodyColorLetras" for="nombrecuenta">Usuario</label></h4>
+                              {{ form.username }}
+                            </div>
+                            <div class="centro bloque">
+                              <h4><label class="centro BodyColorLetras" for="contraseña">Nombre</label></h4>
+                              {{ form.first_name }}
+                            </div>
+                            <div class="centro bloque">
+                              <h4><label class="centro BodyColorLetras" for="contraseña">Apellidos</label></h4>
+                              {{ form.last_name }}
+                            </div>
+                            <div class="centro bloque">
+                              <h4><label class="centro BodyColorLetras" for="contraseña">Correo</label></h4>
+                              {{ form.email }}
+                            </div>
+                            <div class="centro bloque">
+                              <h4><label class="centro BodyColorLetras" for="contraseña">Contraseña</label></h4>
+                              {{ form.password1 }}
+                            </div>
+                            <div class="centro bloque">
+                              <h4><label class="centro BodyColorLetras" for="contraseña">Confirmar contraseña</label></h4>
+                              {{ form.password2}}
+                            </div>
+                            <h2><input class="boton centro" type = 'submit' value="REGISTRARSE" /></h2>
 
                         </form>
                     </div>
