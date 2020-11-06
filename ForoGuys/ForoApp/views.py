@@ -7,10 +7,34 @@ from .forms import PostForm
 from .forms import UsuariosFrom, Raw, CustomUserCreateForm
 from django.shortcuts import redirect
 from django.http import HttpResponse
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, User
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 
 
+
+
+def password_reset_form(request):
+    data= {
+        'form':Raw()
+    }
+    return render(request,'recuperarcontraseña/password_reset_form.html',data)
+
+def password_reset_done(request):
+    return render(request,'recuperarcontraseña/password_reset_done.html')
+
+def password_reset_email(request):
+    return render(request,'recuperarcontraseña/password_reset_email.html')
+
+def password_reset_confirm(request):
+    return render(request,'recuperarcontraseña/password_reset_confirm.html')
+
+def password_reset_complete(request):
+    return render(request,'recuperarcontraseña/password_reset_complete.html')
+
+def usuarios(request):
+    return render(request,'Usuarios/usuarios.html')
 # Create your views here.
 def registro(request):
     data= {
@@ -45,6 +69,11 @@ def post_new(request):
             form = PostForm()
         return render(request, 'ForoApp/editar.html', {'form': form})
 
+def user_list(request):
+    usuario = CustomUserCreateForm.objects.all()
+    context = {'usuarios':usuario}
+    return render(request, 'Usuarios/usuarios.html', context)
+
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
@@ -57,6 +86,8 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'ForoApp/editar.html', {'form': form})
+
+
 
 def inicio(request):
     return render(request,'ForoApp/inicio.html')

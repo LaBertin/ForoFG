@@ -1,0 +1,25 @@
+{% extends 'ForoApp/base.html' %}
+{% block content %}
+<table class="BodyColorLetras table table-bordered">
+    <thead>
+        <td>N°</td>
+        <td>Cuenta</td>
+        <td>Nombre</td>
+        <td>Apellido</td>
+        <td>Email</td>
+        <td>Eliminar</td>
+    </thead>
+    <tbody>
+        {% for usuario in usuarios %}
+        <tr>
+            <td></td>
+            <td>{{usuario.username}}</td>
+            <td>{{usuario.first_name}}</td>
+            <td>{{usuario.last_name}}</td>
+            <td>{{usuario.email}}</td>
+            <td></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

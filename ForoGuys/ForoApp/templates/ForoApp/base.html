@@ -24,7 +24,10 @@
                 <li> <a href="#"> {{ user.username }}</a></li>
                 {% else %}
                 <li class="nav-item"> <a href="{% url 'registro' %}">REGISTRARSE</a></li>
-                <li><a href="{% url 'login' %}">INICIAR SESION</a></li>
+                <li class="nav-item"><a href="{% url 'login' %}">INICIAR SESION</a></li>
+                {% endif %}
+                {% if user.is_superuser %}
+                <li class="nav-item"> <a href="{% url 'usuarios' %}">LISTAR USUARIOS</a></li>
                 {% endif %}
 
 

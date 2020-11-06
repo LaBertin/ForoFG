@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     Código_FallGuys = models.CharField(max_length=4)
