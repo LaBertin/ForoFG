@@ -11,6 +11,9 @@
     <br>
     <br>
     <h3 class="BodyColorLetras centro">Tienes que iniciar sesión para publicar</h3>
+    {% for user in mostrarnombres %}
+      <h1>{{user.username}}</h1>
+    {% endfor %}
     <br><br>
     <br>
     <br>

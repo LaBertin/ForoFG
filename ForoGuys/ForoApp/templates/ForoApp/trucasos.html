@@ -26,6 +26,28 @@
 {% extends 'ForoApp/base.html' %}
 {% block content %}
 {% load static %}
+
+
+<div class="centro tamaño">
+    <a class="titulonoti"> TRUCAZOS </a>
+    <div class="conte nombreletras">
+      {% for truco in trucasos %}
+      <div class="bloque4 border">
+        <br>
+        
+
+          <img class="centro bordefoto zoom fotomar" src="{{truco.imagen_truco.url}}" width="300"> </a>
+          <br>
+          <details>
+              <summary>
+                  <a class="BodyColorLetras">{{truco.mapa}}</a>
+              </summary>
+              <a class="BodyColorLetras">
+                  {{truco.desc_truco}}
+          </details>
+      </div>
+  {% endfor %}
+<!--
         <div class="centro tamaño">
             <a class="titulonoti"> TRUCAZOS </a>
             <div class="conte nombreletras">
@@ -324,4 +346,5 @@
                     </details>
                 </div>
             </div>
+          -->
 {% endblock %}
