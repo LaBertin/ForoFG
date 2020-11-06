@@ -32,8 +32,8 @@ class Trucos(models.Model):
         return self.mapa
 
 class Noticia(models.Model):
-    titulo = models.CharField(max_length=50)
-    desc = models.CharField(max_length=600)
+    titulo = models.CharField(max_length=500)
+    desc = models.CharField(max_length=6000)
     fecha = models.DateTimeField(
         default=timezone.now)
     imagen = models.ImageField(upload_to="Noticia", null=True)
