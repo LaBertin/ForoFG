@@ -56,11 +56,11 @@
         </a>
     </div>
     <body>
-    
+
         {% for noti in noticias %}
 
         <div class="tamaño centro ">
-            <div class="conte colorSeccion">
+            <div class="conte">
                 <div class="fotonoti bloque grow2">
                     <br>
                     {% if noti.imagen %}
@@ -81,6 +81,7 @@
                 </div>
             </div>
         </div>
+        {% if forloop.counter|divisibleby:1 %}</div><div class="colorSeccion">{% endif %}
         {% endfor %}
 
 
