@@ -57,9 +57,35 @@
     </div>
     <body>
     
+        {% for noti in noticias %}
 
-    
-        <a class="titulonoti centro">Sección de noticias</a>
+        <div class="tamaño centro ">
+            <div class="conte colorSeccion">
+                <div class="fotonoti bloque grow2">
+                    <br>
+                    {% if noti.imagen %}
+                    <a href="inicio.html" ><img src="{{noti.imagen.url}}" width="325"> </a>
+                    {% endif %}
+                </div>
+                <div class="bloque">
+                  <details>
+                    <summary>
+                      <a class="BodyColorLetras " >
+                          {{ noti.titulo }}
+                      </a>
+                    </summary>
+                    <a class=" BodyColorLetras " >
+                      {{ noti.desc }}
+                    </a>
+                </details>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+
+        <!--<a class="titulonoti centro">Sección de noticias</a>
             <div class="tamaño centro ">
                 <div class=" conte">
                     <div class="fotonoti bloque grow2">
@@ -119,5 +145,5 @@
                     </details>
                     </div>
                 </div>
-            </div>
+            </div>-->
             {% endblock %}
