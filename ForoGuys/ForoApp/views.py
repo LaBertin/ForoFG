@@ -35,11 +35,10 @@ def password_reset_complete(request):
     return render(request,'recuperarcontraseña/password_reset_complete.html')
 
 def usuarios(request):
-    return render(request,'Usuarios/usuarios.html')
-# Create your views here.
-def mostrar(request):
-    mostrarnombres=User.objects.all()
-    return render(request,'ForoApp/inicio.html',{"mostrarusuario":mostrarnombres})
+    user = User.objects.all
+    context = {'usuarios':user}
+    return render(request,'Usuarios/usuarios.html', context)
+
 
 def registro(request):
     data= {
@@ -75,7 +74,7 @@ def post_new(request):
         return render(request, 'ForoApp/editar.html', {'form': form})
 
 def user_list(request):
-    usuario = CustomUserCreateForm.objects.all()
+    usuario = User.objects.all()
     context = {'usuarios':usuario}
     return render(request, 'Usuarios/usuarios.html', context)
 
