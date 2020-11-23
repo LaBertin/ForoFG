@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 LOGIN_REDIRECT_URL ='/'
 LOGOUT_REDIRECT_URL ='/'
 
+SOCIAL_AUTH_FACEBOOK_KEY = '371881760779951'
+SOCIAL_AUTH_FACEBOOK_SECRET = '7585ff39185d297a4a870088ae49670c'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ForoApp',
+    'social_django'
 ]
 
 MIDDLEWARE = [
@@ -51,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'ForoGuys.urls'
@@ -66,6 +71,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
+
             ],
         },
     },
@@ -132,3 +140,8 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'correosforofg@gmail.com'
 EMAIL_HOST_PASSWORD = 'forofg123'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
