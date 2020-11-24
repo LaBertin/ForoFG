@@ -29,15 +29,16 @@
                               <h5 class="centro"><a class="BodyColorLetras" href="{% url 'password_reset_form' %}">Se me olvido la contraseña</a></h5>
                             </div>
                             <hr>
-                            
+
                             <h2><input class="boton centro" type="submit" value="INGRESAR"></h2>
 
                         </form>
+                        <a href="{% url 'social:begin' 'facebook' %}">Login con facebook</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
 </body>
 </html>
 {% endblock %}

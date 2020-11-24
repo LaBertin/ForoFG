@@ -22,9 +22,11 @@ from django.conf import settings
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    
+
  url(r'^admin/', admin.site.urls),
  url(r'', include('ForoApp.urls')),
  url(r'accounts/', include('django.contrib.auth.urls')),
+ path('oauth/', include('social_django.urls', namespace='social'))
+
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
