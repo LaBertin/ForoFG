@@ -26,7 +26,7 @@ urlpatterns = [
  url(r'^admin/', admin.site.urls),
  url(r'', include('ForoApp.urls')),
  url(r'accounts/', include('django.contrib.auth.urls')),
- path('oauth/', include('social_django.urls', namespace='social'))
-
+ path('oauth/', include('social_django.urls', namespace='social'))  ,
+ path('account/', include('allauth.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
