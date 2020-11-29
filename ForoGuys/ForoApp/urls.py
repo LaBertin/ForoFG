@@ -1,6 +1,6 @@
 from django.conf.urls import include, url
 from . import views
-from django.contrib.auth.views import LoginView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView 
+from django.contrib.auth.views import LoginView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
 from django.contrib import admin
 from django.urls import path, re_path, include
 from django.urls import reverse_lazy
@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^$', views.inicio, name= 'Inicio' ),
     url(r'^iniciasesion', views.iniciasesion, name= 'iniciasesion' ),
     url(r'^top_jugadores', views.top_jugadores, name= 'top_jugadores' ),
+    url(r'^juntas', views.juntas, name= 'juntas' ),
     url(r'^trucasos', views.trucasos, name= 'trucasos' ),
     url(r'^foro', views.foro, name= 'foro' ),
     url(r'^registro', views.registro, name='registro'),
