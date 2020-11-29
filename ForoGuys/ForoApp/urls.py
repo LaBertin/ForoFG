@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^password_reset_email', views.password_reset_email, name= 'password_reset_email' ),
     url(r'^password_reset_confirm', views.password_reset_confirm, name= 'password_reset_confirm' ),
     url(r'^password_reset_complete', views.password_reset_complete, name= 'password_reset_complete' ),
-    path('reset/password_reset', PasswordResetView.as_view(template_name='registration/password_reset_forms.html', email_template_name="registration/password_reset_email.html"), name = 'password_reset'),
+    path('reset/password_reset', PasswordResetView.as_view(template_name='registration/password_reset_forms.html', email_template_name='registration/password_reset_email.html'), name = 'password_reset'),
     path('reset/password_reset_done', PasswordResetDoneView.as_view(template_name='registration/password_reset_done.html'), name = 'password_reset_done'),
     re_path(r'^reset/(?P<uidb64>[0-9A-za-z_\-]+)/(?P<token>.+)/$', PasswordResetConfirmView.as_view(template_name='registration/password_reset_confirms.html'), name = 'password_reset_confirm'),
     path('reset/done',PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html') , name = 'password_reset_complete'),
