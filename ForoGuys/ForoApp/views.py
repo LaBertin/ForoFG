@@ -117,6 +117,10 @@ def trucasos(request):
 def top_jugadores(request):
     return render(request,'ForoApp/top_jugadores.html')
 
+def juntas(request):
+    return render(request,'ForoApp/juntas.html')
+
+
 def foro(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'ForoApp/foro.html', {'posts': posts})
