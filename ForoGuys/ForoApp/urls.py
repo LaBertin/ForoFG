@@ -18,6 +18,7 @@ urlpatterns = [
     url(r'^foro', views.foro, name= 'foro' ),
     url(r'^registro', views.registro, name='registro'),
     url(r'^usuarios', views.usuarios, name= 'usuarios' ),
+    url(r'^usuarios/delete/', views.user_remove,name='user_remove'),
     url(r'^listar', views.user_list, name='listar'),
     url(r'^password_reset_form', views.password_reset_form, name= 'password_reset_form' ),
     url(r'^password_reset_done', views.password_reset_done, name= 'password_reset_done' ),
