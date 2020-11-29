@@ -78,6 +78,12 @@ def user_list(request):
     context = {'usuarios':usuario}
     return render(request, 'Usuarios/usuarios.html', context)
 
+def user_remove(request,id):
+    usuario = User.objects.all()
+    usuario.delete()
+
+    return redirect ('usuarios')
+
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
