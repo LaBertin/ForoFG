@@ -14,7 +14,6 @@ urlpatterns = [
     url(r'^$', views.inicio, name= 'Inicio' ),
     url(r'^iniciasesion', views.iniciasesion, name= 'iniciasesion' ),
     url(r'^top_jugadores', views.top_jugadores, name= 'top_jugadores' ),
-    url(r'^juntas', views.juntas, name= 'juntas' ),
     url(r'^trucasos', views.trucasos, name= 'trucasos' ),
     url(r'^foro', views.foro, name= 'foro' ),
     url(r'^registro', views.registro, name='registro'),

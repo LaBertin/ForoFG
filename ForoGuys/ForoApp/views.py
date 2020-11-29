@@ -117,8 +117,6 @@ def trucasos(request):
 def top_jugadores(request):
     return render(request,'ForoApp/top_jugadores.html')
 
-def juntas(request):
-    return render(request,'ForoApp/juntas.html')
 
 
 def foro(request):
