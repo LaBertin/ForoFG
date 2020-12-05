@@ -12,6 +12,15 @@ from django.contrib.auth.forms import UserCreationForm, User
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
+from .services import get_username
+
+def hello_user(requests):
+    context = {
+        'name': get_username()
+    }
+    
+    return render(requests, 'hello_user.html', context)
+
 
 
 

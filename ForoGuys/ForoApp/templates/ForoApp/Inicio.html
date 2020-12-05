@@ -21,7 +21,7 @@
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-
+        
         <div class="carousel-inner">
             <div class="item active">
                 <img class="centro" src="{% static 'img\fall-guys-ultimate-knockout-2010653.jpg' %}" width=70%  alt="">
@@ -81,8 +81,13 @@
                 </div>
             </div>
         </div>
+        
         {% if forloop.counter|divisibleby:1 %}</div><div class="colorSeccion">{% endif %}
         {% endfor %}
+        <div>
+
+            
+        </div>
 
 
 
