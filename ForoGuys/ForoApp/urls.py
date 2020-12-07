@@ -6,8 +6,8 @@ from django.urls import path, re_path, include
 from django.urls import reverse_lazy
 
 
-urlpatterns = [
 
+urlpatterns = [
     url(r'^post/(?P<pk>[0-9]+)/$', views.post_detail,name='detalle_publicacion'),
     url(r'^post/new/$', views.post_new, name='nuevo_post'),
     url(r'^post/(?P<pk>[0-9]+)/edit/$', views.post_edit, name='editar'),

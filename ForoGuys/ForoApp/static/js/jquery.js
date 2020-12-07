@@ -1,3 +1,23 @@
+function chuck() {
+  const settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random",
+    "method": "GET",
+    "headers": {
+      "accept": "application/json",
+      "x-rapidapi-key": "SIGN-UP-FOR-KEY",
+      "x-rapidapi-host": "matchilling-chuck-norris-jokes-v1.p.rapidapi.com"
+    }
+  };
+  
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+    
+  });
+  
+}
+
 $(function() {
 
 	$.validator.setDefaults({
