@@ -19,6 +19,12 @@
               </summary>
               <a class="BodyColorLetras">
                   {{truco.desc_truco}}
+                  {% if user.is_superuser %}
+                  <br>
+                  <br>
+                  <h6><a href="{% url 'eliminartruco' pk=truco.pk %} "class="btn btn-danger"> Eliminar Truco</a></h6>
+                  <br>
+                  {% endif %}
           </details>
       </div>
   {% endfor %}

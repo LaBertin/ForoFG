@@ -41,7 +41,9 @@ body{
     width: auto;
     height: 400;
 }
-
+.LetrasRojas{
+    color: red  ;
+}
 .BodyColorLetras {
     text-shadow: 2px 2px black;   
     color: white;
