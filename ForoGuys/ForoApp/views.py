@@ -18,7 +18,7 @@ from django.contrib.auth import get_user_model
     context = {
         'name': get_username()
     }
-    
+
     return render(requests, 'hello_user.html', context)'''
 
 
@@ -124,7 +124,7 @@ def eliminartruco(request,pk):
     trucodel = Trucos.objects.get(pk=pk)
     trucodel.delete()
     return redirect('/trucasos.html')
-    
+
 
 
 

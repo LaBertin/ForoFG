@@ -2,6 +2,7 @@
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="manifest" href="ForoApp\manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="js/ajSlider.js"></script>
@@ -21,7 +22,7 @@
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-        
+
         <div class="carousel-inner">
             <div class="item active">
                 <img class="centro" src="{% static 'img\fall-guys-ultimate-knockout-2010653.jpg' %}" width=70%  alt="">
@@ -56,7 +57,9 @@
         </a>
     </div>
     <body>
-
+      <div id='installer'>
+            <button class='button'>Install</button>
+          </div>
         {% for noti in noticias %}
 
         <div class="tamaño centro ">
@@ -81,12 +84,12 @@
                 </div>
             </div>
         </div>
-        
+
         {% if forloop.counter|divisibleby:1 %}</div><div class="colorSeccion">{% endif %}
         {% endfor %}
         <div>
 
-            
+
         </div>
 
 
