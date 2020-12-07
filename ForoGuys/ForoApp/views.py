@@ -12,17 +12,14 @@ from django.contrib.auth.forms import UserCreationForm, User
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
-from .services import get_username
+'''from .services import get_username'''
 
-def hello_user(requests):
+'''def hello_user(request):
     context = {
         'name': get_username()
     }
     
-    return render(requests, 'hello_user.html', context)
-
-
-
+    return render(requests, 'hello_user.html', context)'''
 
 
 def password_reset_form(request):
@@ -87,8 +84,8 @@ def user_list(request):
     context = {'usuarios':usuario}
     return render(request, 'Usuarios/usuarios.html', context)
 
-def user_remove(request,id):
-    usuario = User.objects.all()
+def user_remove(request,pk):
+    usuario = User.objects.get(pk=pk)
     usuario.delete()
 
     return redirect ('usuarios')
@@ -109,7 +106,7 @@ def post_edit(request, pk):
 
 
 def inicio(request):
-    noti = Noticia.objects.all();
+    noti = Noticia.objects.all()
     context = {'noticias':noti}
     return render(request,'ForoApp/inicio.html',context)
 
@@ -119,9 +116,19 @@ def iniciasesion(request):
 
 
 def trucasos(request):
-    truco = Trucos.objects.all();
+    truco = Trucos.objects.all()
     context = {'trucasos':truco}
     return render(request,'ForoApp/trucasos.html' , context)
+
+def eliminartruco(request,pk):
+    trucodel = Trucos.objects.get(pk=pk)
+    trucodel.delete()
+    return redirect('/trucasos.html')
+    
+
+
+
+
 
 def top_jugadores(request):
     return render(request,'ForoApp/top_jugadores.html')
