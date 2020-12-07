@@ -1,7 +1,8 @@
 var CACHE_NAME = 'ForoGuy';
 var urlsToCache = [
     '/trucasos',
-    
+    '/'
+
 ];
 
 self.addEventListener('install', function(event) {

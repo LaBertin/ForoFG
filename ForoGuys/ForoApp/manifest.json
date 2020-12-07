@@ -1,0 +1,59 @@
+{
+  "name": "ForoGuy",
+  "short_name": "Foro",
+  "description": "The world's best airhorner, and it's free",
+  "icons": [
+      {
+        "src": "/ForoApp/static/img/icons/icon48.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "/ForoApp/static/img/icons/icon72.png",
+        "type": "image/png",
+        "sizes": "72x72"
+      },
+      {
+        "src": "/ForoApp/static/img/icons/icon96.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+
+      {
+        "src": "/ForoApp/static/img/icons/icon162.png",
+        "type": "image/png",
+        "sizes": "162x162"
+      },
+      {
+        "src": "/ForoApp/static/img/icons/iconcientocuarentaycuatro.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "/ForoApp/static/img/icons/icon194.png",
+        "type": "image/png",
+        "sizes": "194x194"
+      },
+      {
+        "src": "/ForoApp/static/img/icons/icon256.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      },
+      {
+        "src": "/ForoApp/static/img/icons/icon384.png",
+        "type": "image/png",
+        "sizes": "384x384"
+      },
+      {
+        "src": "/ForoApp/static/img/icons/icon512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#2196F3",
+  "theme_color": "#2196F3"
+}
