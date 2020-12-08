@@ -1,11 +1,14 @@
 {% extends 'ForoApp/base.html' %}
-<link rel="manifest" href="ForoApp\manifest.json">
+
 {% block content %}
 {% load static %}
 
-
 <div class="centro tamaño">
     <a class="titulonoti"> TRUCAZOS </a>
+<div>
+  <button class="button">Install</button>
+</div>
+
     <div class="conte nombreletras">
       {% for truco in trucasos %}
       <div class="bloque4 border">

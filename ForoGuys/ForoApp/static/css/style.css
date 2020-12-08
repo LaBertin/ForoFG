@@ -45,14 +45,14 @@ body{
     color: red  ;
 }
 .BodyColorLetras {
-    text-shadow: 2px 2px black;   
+    text-shadow: 2px 2px black;
     color: white;
     font-family: 'Titan One', cursive;
     font-size: 25;
     text-decoration: none;
 }
 .titulonoti{
-    text-shadow: 2px 2px black;   
+    text-shadow: 2px 2px black;
 
     font-size: 23;
     color: #30D7DD;
@@ -63,7 +63,7 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
-    
+
 }
 .margent{
     height: 50;
@@ -74,7 +74,7 @@ body{
     width: 48%;
     margin-top: 0.7cm;
     margin-left: 5%;
-     text-shadow: 2px 2px black;   
+     text-shadow: 2px 2px black;
     color: white;
     font-family: 'Titan One', cursive;
     font-size: 15;
@@ -85,11 +85,11 @@ body{
     margin-top: 0.7cm;
 }
 .textonombreletras{
-    text-shadow: 2px 2px black;   
+    text-shadow: 2px 2px black;
     color: white;
     font-family: 'Titan One', cursive;
     text-align: center;
-    
+
 }
 .fotocorona{
     text-align: left;
@@ -106,7 +106,7 @@ body{
 }
 
 .nombreletras{
-    text-shadow: 2px 2px black;   
+    text-shadow: 2px 2px black;
     color: white;
     font-family: 'Titan One', cursive;
     text-align: center;
@@ -136,7 +136,7 @@ body{
 
 .border{
     border: 7px solid pink;
-    
+
 }
 
 .textareaapodo{
@@ -156,7 +156,7 @@ body{
     background: none;
     border: none;
 }
-.footer{    
+.footer{
     height: 2cm;
     width: 100%;
     background-color: #f7c500;
@@ -204,7 +204,7 @@ body{
 .error-control {
     border: 1px solid red;
   }
-  
+
   label.error {
     color: red;
     width: 300px;
@@ -212,6 +212,8 @@ body{
     margin-top: -5px;
     margin-bottom: 10px;
   }
+
+  
 .boton{
     background-color:  #F63BA2;
     font-family: 'Titan One', cursive;
@@ -221,12 +223,12 @@ body{
     outline: none;
     box-shadow: none;
     border-style: none;
-    text-shadow: 2px 2px black;   
-    
+    text-shadow: 2px 2px black;
+
 }
 @media (min-width:750px){
     /*Inicio*/
-   
+
     /*Iniciar sesion*/
     .bloque{
         flex-grow: 1;
@@ -239,7 +241,7 @@ body{
         flex-wrap: wrap;
         flex-flow: row wrap;
     }
-    
+
     /*Trucazos*/
     .MiniMBCL{
         display:none

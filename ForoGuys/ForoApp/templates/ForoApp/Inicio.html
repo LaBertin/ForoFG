@@ -8,6 +8,7 @@
     <script type="text/javascript" src="js/ajSlider.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="jquery.slides.min.js"></script>
+    <script src="/ForoApp/static/js/install.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
@@ -56,10 +57,11 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
     <body>
-      <div id='installer'>
-            <button class='button'>Install</button>
-          </div>
+
+      <button href="#" hidden>Install!</button>
+
         {% for noti in noticias %}
 
         <div class="tamaño centro ">
@@ -93,66 +95,4 @@
         </div>
 
 
-
-        <!--<a class="titulonoti centro">Sección de noticias</a>
-            <div class="tamaño centro ">
-                <div class=" conte">
-                    <div class="fotonoti bloque grow2">
-                        <br>
-                        <a><img src="{% static 'img\fall-guys-ultimate-knockout-2010653.jpg' %}" width="325"> </a>
-                    </div>
-                    <div class="bloque">
-                      <details>
-                        <summary>
-                            <a class="BodyColorLetras boton" >
-                            Mediatonic anuncia novedades inminentes para su popular juego multijugador con la irrupción de llamado sistema Big Yeetus, que cambiará los niveles.
-                            </a>
-                        </summary>
-                        <a class=" BodyColorLetras boton" >
-                            Fall Guys añadirá próximamente más caos a sus ya de por sí alocadas carreras y pruebas de toda clase a través del enigmático sistema bautizado por Mediatonic como Big Yeetus, una serie de modificadores de los escenarios que cambiarán ciertos elementos para dar un aire fresco a cada nueva partida. Así lo han anunciado sus creadores a través de una publicación en su canal oficial de Twitter junto a un breve clip de vídeo a modo de ejemplo.
-                        </a>
-                    </details>
-                    </div>
-                </div>
-            </div>
-            <div class="tamaño centro ">
-                <div class="conte colorSeccion">
-                    <div class="fotonoti bloque grow2">
-                        <br>
-                        <a href="inicio.html" ><img src="{% static 'img\noticia2.jpg' %}" width="325"> </a>
-                    </div>
-                    <div class="bloque">
-                      <details>
-                        <summary>
-                          <a class="BodyColorLetras " >
-                            Fall Guys anuncia nuevas medidas para combatir a los tramposos similares a Fortnite.
-                          </a>
-                        </summary>
-                        <a class=" BodyColorLetras " >
-                          Fall Guys: Ultimate Knockout es un juego competitivo muy popular: lo que significa que es el caldo de cultivo idóneo para los tramposos. El juego debutó a principios de agosto en España y en todo el mundo, llegando primero a las plataformas de PC y PS4. Si bien desde el estudio de desarrollo Mediatonic ya iniciaron las primeras rondas de expulsión de tramposos, el equipo ha anunciado que instaurará un sistema de detección anti-trampas similar al que podemos encontrar en juegos como Fortnite.
-                        </a>
-                    </details>
-                    </div>
-                </div>
-            </div>
-            <div class="tamaño centro ">
-                <div class="conte">
-                    <div class="fotonoti bloque grow2">
-                        <br>
-                        <a href="inicio.html" ><img src="{% static 'img\noticia3.jpg' %}" width="325"> </a>
-                    </div>
-                    <div class="bloque">
-                      <details>
-                        <summary>
-                          <a class="Contenedorb BodyColorLetras grow" >
-                            Fall Guys... pero con gritos de seres humanos: La diversión más espeluznante
-                        </a>
-                        </summary>
-                        <a class=" BodyColorLetras " >
-                          Fall Guys: Ultimate Knockout se ha convertido en un auténtico fenómeno tanto en España como en distintos puntos del mundo, desde que debutó a principios del mes de agosto tanto en PC a través de Steam como en PS4, donde incluso formó parte de los juegos de PS Plus. Desde entonces, los jugadores han imaginado múltiples posibilidades para el título: desde escenarios para Rocket League hasta skins para una hipotética colaboración con Fortnite. Sin embargo, el canal de YouTube The Warp Zone ha ido un paso más allá: ha sustituido los gritos de los personajes por quejidos humanos, y este es el espeluznante resultado.
-                        </a>
-                    </details>
-                    </div>
-                </div>
-            </div>-->
             {% endblock %}
