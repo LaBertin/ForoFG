@@ -21,7 +21,6 @@ PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'serviceworker.js')
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ujqtr*92n(y7j*bqb04%vv4y$-7lq6hi=!1sx_e!-j*m@1gc&m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,9 +30,7 @@ ALLOWED_HOSTS = []
 LOGIN_REDIRECT_URL ='/'
 LOGOUT_REDIRECT_URL ='/'
 
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
-SOCIAL_AUTH_FACEBOOK_KEY = '371881760779951'
-SOCIAL_AUTH_FACEBOOK_SECRET = '7585ff39185d297a4a870088ae49670c'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/''
 
 # Application definition
 
