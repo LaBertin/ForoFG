@@ -138,12 +138,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Email para recuperar la contraseña
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'correosforofg@gmail.com'
-EMAIL_HOST_PASSWORD = 'forofg123'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.facebook.FacebookOAuth2',
